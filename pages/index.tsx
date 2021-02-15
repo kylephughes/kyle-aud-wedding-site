@@ -13,10 +13,8 @@ import { createMuiTheme, withStyles } from '@material-ui/core/styles'
 
 import CustomTabs from '../src/CustomTabs'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import FastfoodIcon from '@material-ui/icons/Fastfood'
 import Head from 'next/head'
 import Image from 'next/image'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Slideshow from '../src/Slideshow'
 import teal from '@material-ui/core/colors/teal'
 
@@ -60,7 +58,7 @@ export default function Home() {
         <Head>
           <title>Audrey & Kyles Wedding</title>
         </Head>
-        <Grid container direction="column" justify="center" spacing={3}>
+        <Grid container direction="column" justify="center" spacing={2}>
           <Grid container justify="center" item>
             <Typography variant="h3" color="primary">
               Audrey & Kyles Wedding
@@ -70,11 +68,24 @@ export default function Home() {
             <Typography color="primary" variant="body1">
               May 28th, 2022
             </Typography>
-          </Grid>
-          <Grid container justify="center" item>
-            <Typography color="primary" variant="body1">
-              Lighthouse Inn - West Dennis, MA
-            </Typography>
+
+            <Grid container style={{ paddingTop: 12 }} justify="center" item>
+              <Grid container item justify="center">
+                <Typography component="div" color="primary" variant="body1">
+                  Lighthouse Inn
+                </Typography>
+              </Grid>
+              <Grid container justify="center" item>
+                <Typography component="div" color="primary" variant="body1">
+                  1 Lighthouse Inn Road
+                </Typography>
+              </Grid>
+              <Grid container justify="center" item>
+                <Typography color="primary" variant="body1">
+                  West Dennis, MA 02670
+                </Typography>
+              </Grid>
+            </Grid>
           </Grid>
           <Grid container style={{ paddingTop: 12 }} justify="center" item>
             <CustomTabs />

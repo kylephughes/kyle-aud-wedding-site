@@ -27,11 +27,6 @@ const Slideshow = (props) => {
       {items.map((item, index) => (
         <Card key={index} className="slideshow-card">
           <CardMedia style={{ height: 500 }} image={item.image} title={item.description} />
-          <CardContent>
-            <Grid container justify="center">
-              <Typography variant="body1">{item.description}</Typography>
-            </Grid>
-          </CardContent>
         </Card>
       ))}
     </Carousel>
